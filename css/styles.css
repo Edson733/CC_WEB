@@ -1,0 +1,510 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.uno {
+    height: 120vh;
+    background-image: url(../img/CC1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+a:hover {
+    color: red;
+}
+
+/*HEADER*/
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a img {
+    width: 200px;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem
+}
+
+.navbar .toggle_btn {
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    background-color: red;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: white;
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+/*DROPDOWN MENU*/
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 240px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*CONTACTO*/
+section#contact {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/*EMPRESA*/
+section#empresa {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#empresa h1 {
+    max-width: 1200px;
+    font-size: 1.5rem;
+}
+
+/*TARJETAS*/
+.tres {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tres .card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 3rem 8rem;
+}
+
+.tres .card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.tres .card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px black;
+}
+
+.tres .card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tres .card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.tres .card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: #BDC3C7;
+    color: #f3f3f3;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px black;
+    
+}
+
+.tres .card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.tres .card .back .link a {
+    color: #f3f3f3;
+}
+
+.tres .card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.tres .card .back p {
+    letter-spacing: 1px;
+}
+
+.tres .card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.tres .card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/*SECCIONES*/
+.cuatro {
+    display: flex;
+    flex-direction: column;
+}
+
+.cuatro .spe_uni {
+    background: #99A3A4;
+    width: 100%;
+    height: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.cuatro .spe_uni img {
+    opacity: 0.7;
+}
+
+.cuatro .spe_uni .info {
+    max-width: 800px;
+    display: flex;
+    text-align: center;
+    gap: 8rem;
+    color: white;
+    position: absolute;
+}
+
+/*TABLA*/
+.cinco {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 200px 70px;
+    font-size: 20px;
+}
+
+.cinco .tabla h4 {
+    margin-bottom: 1rem;
+}
+
+/*INSCRIBIR*/
+.seis {
+    align-items: center;
+    justify-content: center;
+    background-color: #E5E7E9;
+}
+
+.seis h5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+.seis .inscribir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seis .inscribir .input-field {
+    position: relative;
+    padding-right: 5px;
+}
+
+.seis .inscribir .input-field input {
+    width: 350px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 0 15px;
+    border: 2px solid black;
+    background: transparent;
+    color: black;
+    outline: none;
+}
+
+.seis .inscribir .input-field label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 19px;
+    pointer-events: none;
+    transition: 0.3s
+}
+
+.seis .inscribir input:focus ~ label {
+    top: 0;
+    left: 15px;
+    font-size: 16px;
+    padding: 0 2px;
+    background: #E5E7E9;
+    
+}
+
+.seis .inscribir a {
+    height: 60px;
+    background-color: gray;
+    border-radius: 10px;
+    padding: 15px 30px;
+    color: white;
+}
+
+.seis .inscribir a:hover {
+    background-color: red;
+    color: white;
+}
+
+.seis .check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    cursor: pointer;
+    padding: 15px 15px;
+}
+
+.seis .check input {
+    position: absolute;
+    opacity: 0;
+}
+
+.seis .input-check {
+    position: relative;
+    display: inline-block;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    margin-right: 5px;
+    transition: 0.5s;
+}
+
+.seis .check input:checked ~ .input-check {
+    background: #7d2ae8;
+    border-color: #7d2ae8;
+    animation: animate 0.7s ease;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.3, 0.7);
+    }
+    55% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(1.2, 0.8);
+    }
+    80% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(1.1, 0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.seis .input-check::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    width: 15px;
+    height: 6px;
+    border-bottom: 4px solid white;
+    border-left: 4px solid white;
+    transform: scale(0) rotate(-45deg);
+    transition: 0.5s;
+}
+
+.seis .check input:checked ~ .input-check::before {
+    transform: scale(1) rotate(-45deg);
+}
+
+/*FOOTER*/
+.siete {
+    background: #E74C3C;
+}
+
+.siete .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.siete .footer-row .primera {
+    position: relative;
+    margin: 2rem;
+}
+
+.siete .footer-row .primera h4 {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid white;
+    display: inline-block;
+}
+
+.siete .footer-row .primera i {
+    color: white;
+}
+
+.siete .footer-row .primera .social-links a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.siete .footer-row .primera .social-links a:hover {
+    background-color: gray;
+}
+
+.siete .footer-row .segunda {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.siete .footer-row .segunda .social-pago a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.siete .footer-row .segunda .social-pago a:hover {
+    background-color: gray;
+}
+
+/*DISEÑO RESPONSIVO*/
+@media(max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+
+
+}
+
+@media(max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
